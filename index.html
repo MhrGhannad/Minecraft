@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minecraft</title>
+    <style>
+        
+        @font-face {
+            font-family: Vazir;
+            src: 
+                url('./fonts/vazir/Vazir.woff') format('woff'),
+                url('./fonts/vazir/Vazir.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-family: Minecraft;
+            src: 
+                url('./fonts/minecraft/Minecraft.woff') format('woff'),
+                url('./fonts/minecraft/Minecraft.woff2') format('woff2');
+        }
+
+        *, *::after, *::before {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            transition: all ease 1s;
+        }
+
+        .hero{
+            width: 100%;
+            height: 100vh;
+            background-image: url(img/عکس-ماینکرافت-خفن-10.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .overlay {
+            width: 100%;
+            pointer-events: none;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .cantent{
+            position:absolute;
+            font-family: Minecraft;            
+
+            top:50%;
+            left: 50%;
+
+            transform:translate(-50%,-50%);
+
+            color:white;
+
+            text-align: center;
+        }
+        .cantent h1{
+            
+            font-size: 70px;
+
+            margin-bottom: 20px; 
+            text-shadow: 8px 8px 12px rgb(24, 75, 28);
+            z-index: 4;
+
+        }
+        .cantent p{
+            
+            font-size: 25px;
+
+            margin-bottom: 30px; 
+        }
+
+        .title {
+            padding: 15px 35px;
+            border: none;
+            background:#45a049; 
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: .3s;
+            z-index: 3;
+        }
+
+        .banner-container {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 4;
+        }
+        
+        .banner-link {
+            margin-top: 20px;
+            margin-right: 20px;
+            z-index: 3;
+            border-radius:20px;
+            display: block;
+        }
+        .banner-link:hover{
+             transform: scale(0.5,0.5); 
+        }
+
+        .banner {
+            display: block;
+            z-index: 2;
+        }
+
+        button {
+            background:#2e7d32;
+            transform:scale(1.1);
+        }
+        .farsi-text{
+            position: absolute;
+            left: 5px;
+            top: 45px;
+            margin-left: 60px;
+        }
+        
+    
+    
+    </style>
+</head>
+<body>
+    
+    <div class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="cantent">
+            <h1>Minecraft</h1>
+            <p>Explore Infinite Worlds</p>
+            <a class="title" href="https://yandex.com/games/app/minecraft-editor-167027">Play Now</a>
+        </div>
+
+        <div class="banner-container">
+            <a class="banner-link" href="img/اسکین-ماینکرافت-دخترانه-خفن.jpg">
+                <img class="banner" src="img/اسکین-ماینکرافت-دخترانه-خفن.jpg" width="200px" height="125.11">
+            </a>
+            <a class="banner-link" href="/img/عکس-ماینکرافت-خفن-9.jpg">
+                <img class="banner" src="/img/عکس-ماینکرافت-خفن-9.jpg" width="200px" height="125.11px">
+            </a>
+            <a class="banner-link" href="/img/عکس-ماینکرافت-خفن-5-1.jpg">
+                <img class="banner" src="/img/عکس-ماینکرافت-خفن-5-1.jpg" width="200px" height="125.11px">
+            </a>
+            <a class="banner-link" href="/img/عکس-ماینکرافت-خفن-7-1.jpg">
+                <img class="banner" src="/img/عکس-ماینکرافت-خفن-7-1.jpg" width="200px" height="125.11px">
+            </a>
+            <a class="banner-link" href="/img/عکس-ماینکرافت-خفن-8.jpg">
+                <img class="banner" src="/img/عکس-ماینکرافت-خفن-8.jpg" width="200px" height="125.11px">
+            </a>
+            <a class="banner-link" href="/img/عکس-اوریگامی-ماینکرافت.jpg">
+                <img class="banner" src="/img/عکس-اوریگامی-ماینکرافت.jpg" width="200px" height="125.11px">
+            </a>
+        </div>
+         <table dir="rtl" style="float: left; direction:ltr;" >
+            <tr>
+                <td style="padding-left: 10px; color: white; font-size:15px; font-family: Minecraft;">
+                   Click on the names of the Minecraft characters to see their pictures:
+                </td>
+                <br>
+                <td class="farsi-text" style=" padding-left: 10px; color:antiquewhite; font-size:12px; font-family: Vazir; ">
+                  <b>(با کلیک بر روی نام شخصیت های ماینکرافت تصویر آنها رو مشاهده کنید)</b>
+                </td>
+                <td>
+                    <select onchange="openCityImage(this.value)" style="font-family:Vazir; width: 150px; height: 30px; border-radius: 5px; background-color: #1b441d; color: white;">
+                        <option value="img/عکس-ماینکرافت-خفن-11.jpg">Steve (استیو)</option>                        
+                        <option value="/img/alex.jpg">Alex (الکس)</option>
+                        <option value="/img/عکس-هیروبراین-ماین-کرافت.jpg">Herobrine (هیروبِراین)</option>
+                        <option value="/img/Villager.jpg">Villager (روستایی)</option>
+                        <option value="/img/iron.jpg">Iron Golem (گولم آهنی)</option>
+                        <option value="/img/ender man.jpg">Enderman (اندرمن)</option>
+                        <option value="/img/k.jpg">Creeper (کریپر)</option>
+                        <option value="/img/zamby.jpg">Zombie (زامبی)</option>
+                        <option value="/img/Skeleton (اسکلت).jpg">Skeleton (اسکلت)</option>
+                        <option value="/img/Spider (عنکبوت).jpg">Spider (عنکبوت)</option>
+                        <option value="/img/Ender Dragon (اژدهای اِند).jpg">Ender Dragon (اژدهای اِند)</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+<script>
+    function openCityImage(url) {
+        if (url !== "") {
+            // این دستور عکس رو توی یک تب جدید باز می‌کنه
+            window.open(url, '_blank');
+        }
+    }
+</script>  
+
+</body>
+</html>
